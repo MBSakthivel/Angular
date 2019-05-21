@@ -1,0 +1,16 @@
+<div>
+  <h1>Demo of in built pipes</h1>
+  Savings : {{money | currency: 'INR'}}
+  <br>
+  Savings : {{money | currency: 'EUR'}}
+  <br>
+  City: {{location | lowercase}}
+  <br>
+  Friends: {{friends}}
+  <br>
+  Friends (sorted): {{friends | sortstring:'dsc'}}
+  <br>
+  Scores: {{scores}}
+  <br>
+  Scores (sorted):{{scores| sortnumber: 'asc'}}
+</div>

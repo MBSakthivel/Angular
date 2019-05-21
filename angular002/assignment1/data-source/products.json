@@ -1,0 +1,35 @@
+{
+    "Products":[
+        {
+            "productId":1,
+            "productName":"Product 1",
+            "id":1
+        },
+        {
+            "productId":2,
+            "productName":"Product 2",
+            "id":1
+        },
+        {
+            "productId":3,
+            "productName":"Product 3",
+            "id":2
+        },
+        {
+            "productId":4,
+            "productName":"Product 4",
+            "categoryId":2
+        },
+        {
+            "productId":5,
+            "productName":"Product 5",
+            "categoryId":3
+        },
+        {
+            "productId":6,
+            "productName":"Product 6",
+            "categoryId":3
+        }
+
+    ]
+}

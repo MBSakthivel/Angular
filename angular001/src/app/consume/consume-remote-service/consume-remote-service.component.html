@@ -1,0 +1,62 @@
+<h1>Service demo with json-server</h1>
+<div>
+  <table border="1">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Year</th>
+    <tr *ngFor="let f of users let currentFiredn = index" style="border-style: 1 px solid black;">
+      <td>{{f.id}}</td>
+      <td>{{f.name}}</td>
+      <td>{{f.year}}</td>
+      <td>
+        <button (click)="deleteFriend(f.id)">Delete</button>
+      </td>
+      <td>
+        <button (click)="updateFriend(f.id)">Update</button>
+      </td>
+      <td>
+          <button (click)="updateInSPA(f.id)">Update in SPA</button>
+        </td>      
+    </tr>
+  </table>
+  <div>
+    <button (click)="addFriends()" [disabled]=displayForm>Add</button>
+  </div>
+  <br>
+  <div *ngIf=displayForm>
+    <fieldset>
+      <legend>
+        Add New friends
+      </legend>
+      <form #addFriendForm="ngForm" (ngSubmit)="saveFriend(addFriendForm.value)">
+        <label>Name</label>
+        <input type="text" name="name" [(ngModel)]="name">
+        <br>
+        <label>Years</label>
+        <input type="number" name="year" [(ngModel)]="year">
+        <br>
+        <button type="submit">{{buttonLabel}}</button>
+      </form>
+    </fieldset>
+  </div>
+</div>
+
+  <div *ngIf=displayUpdateForm>
+    <fieldset>
+      <legend>
+        Update New friends
+      </legend>
+      <form #updateFriendForm="ngForm" (ngSubmit)="saveFriend(updateFriendForm.value)">
+        <label>Id</label>
+        <input type="number" name="id" [(ngModel)]="id" readonly>
+        <br>
+        <label>Name</label>
+        <input type="text" name="name" [(ngModel)]="name">
+        <br>
+        <label>Years</label>
+        <input type="number" name="year" [(ngModel)]="year">
+        <br>
+        <button type="submit">{{buttonLabel}}</button>
+      </form>
+    </fieldset>
+  </div>

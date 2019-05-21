@@ -1,0 +1,14 @@
+<div>
+  <h1>Todo with Reactive Form</h1>
+  <form [formGroup]="todoReactiveForm" (ngSubmit)=saveTodo(todoReactiveForm)>
+    <label>Add</label>
+    <input type="text" formControlName="taskName">
+    <button type="submit">Add Task</button>
+    <br>
+    <ul>
+      <li *ngFor="let w of task let taskcounter=index">{{w}}
+      <button (click)="taskCompleted(taskcounter)">Done</button>
+    </li>
+    </ul>
+  </form>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <form #updateFriendForm="ngForm" (ngSubmit)="saveFriend(updateFriendForm.value)">
+    <label>Id</label> &nbsp;
+    <input type="number" name="id" [(ngModel)]="id">
+    <br>
+    <label>Name</label>&nbsp;
+    <input type="text" name="name" [(ngModel)]="name">
+    <br>
+    <label>Years</label>&nbsp;
+    <input type="number" name="year" [(ngModel)]="year">
+    <br>
+    <button type="submit">Updated</button>
+  </form>
+</div>

@@ -1,0 +1,7 @@
+<div>
+  <ul *ngFor="let currentCategory of categories">
+    <li>
+      <a routerLink="category" (click)="getproduct(currentCategory.id)">{{currentCategory.categoryName}}</a>
+    </li>
+  </ul>
+</div>

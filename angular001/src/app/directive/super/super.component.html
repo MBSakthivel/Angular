@@ -1,0 +1,58 @@
+<div>
+  super works!
+  <ul>
+    <li *ngFor="let f of friends; let counter=index">{{f}} is at {{counter}} position</li>
+  </ul>
+  <ul>
+    <li *ngFor="let c of locations">{{c.city}}</li>
+  </ul>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>City</th>
+        <th>Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of locations">
+        <td>{{c.code}}</td>
+        <td>{{c.city}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<div>
+  Demo of *ngIf directives
+  <button *ngIf="display">Click me to hide</button>
+  <br>
+  <br>
+  Mini Demo for *ngIf
+  <button (click)="playHideandseek()">
+    togogle display of div
+  </button>
+  <div class="hideanseek" *ngIf="display">Hide n seek </div>
+
+  <br>
+
+  Mini demo of *ngIf with else 
+  <button (click)="displayAnyOne()">Display any one</button>
+  <div class="one" *ngIf="checkOne; else template">Display One
+  
+</div>
+<ng-template #template>
+<div class="two">Display Second div</div>
+
+</ng-template>
+</div>
+<br>
+<br>
+
+Demo on ngSwitch
+<div>
+  <div [ngSwitch]="check">
+    <span *ngSwitchCase="'CTS'">Cognizant</span>
+    <span *ngSwitchCase="'INFY'">Infosis</span>
+    <span *ngSwitchDefault>Hyundai</span>
+  </div>
+</div>
